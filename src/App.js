@@ -1,23 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import TableComponent from './component/TableComponent/TableComponent';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+
+  // Table 1 
+  const table1 = ['Name', 'Email Address', 'Role']
+  // Table 2
+  const table2 = ['Email Address', 'Joining Date', 'Role']
+
+  // Table 3
+  const table3 = ['Name', 'City', 'Joining Date', 'Role']
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App max-w-3xl mx-auto">
+      {/* Table 1 */}
+      <TableComponent
+        data={'tableTestData.json'}
+        tableConfig={table1}
+      />
+
+      {/* Table 2 * */}
+      <TableComponent
+        data={'tableTestData.json'}
+        tableConfig={table2}
+      />
+
+      {/* Table 3 */}
+      <TableComponent
+        data={'tableTestData.json'}
+        tableConfig={table3}
+      />
     </div>
   );
 }

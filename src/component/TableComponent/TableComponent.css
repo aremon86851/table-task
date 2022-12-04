@@ -1,0 +1,11 @@
+.table :where(th, td) {
+    padding: 8px;
+}
+
+.for-small-width {
+    width: 570px;
+}
+
+.for-large-width {
+    width: 700px;
+}
